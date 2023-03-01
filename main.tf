@@ -41,11 +41,6 @@ resource "aws_lambda_function" "delete_files_function" {
   handler       = "index.handler"
   runtime       = "python3.8"
 
-  environment = {
-    variables = {
-      BUCKET_NAME = aws_s3_bucket.bucket.bucket
-    }
-  }
 }
 
 resource "aws_cloudwatch_event_rule" "delete_files_rule" {
