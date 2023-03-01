@@ -51,7 +51,7 @@ resource "aws_lambda_function" "delete_files_function" {
 resource "aws_cloudwatch_event_rule" "delete_files_rule" {
   name = "delete_files_rule"
 
-  schedule_expression = "rate(30 minutes)"
+  schedule_expression = "rate(2 minutes)"
 
   targets = [
     {
